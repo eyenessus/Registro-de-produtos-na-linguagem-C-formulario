@@ -1,0 +1,21 @@
+@using ATV1.Controllers
+<table>   
+     <tr>
+        <td>Descricao:</td>
+        <td>Valor:</td>
+        <td>Quantia:</td>
+        <td>Produto:</td>
+    </tr>
+
+
+@foreach (ItemPedido item in Model){
+    <tr>
+        <td>@item.descricao</td>
+        <td>@item.valor</td>
+        <td>@item.quantidade</td>
+        <td>@item.produto</td>
+
+    </tr>
+}
+</table>
+<p>Total do Pedido = @Dados.PedidoAtual.TotalPedido()</p>
